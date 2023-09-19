@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+#faq-sec{
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    flex-wrap: nowrap;
+    padding: 30px 80px;
+    align-items: center;
+    justify-content: center
+}
+#faq-del p {
+    width: 600px;
+    margin: 10px auto;
+    color: white;
+    padding: 0px 10px 0px 0px;
+}
+#faq-del h4{
+    color: #ff9712;
+    margin-bottom: 20px;
+}
+#faq-del h2{
+    margin: 5px auto;
+    color: white;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+#faq-list{
+    display: flex;
+    flex-direction: column;
+}
+.inner-div{
+    color: rgb(0, 0, 0);
+    height: 50px;
+    overflow: hidden;
+    margin:10px auto;
+    translate: all 1s;
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+}
+#inner-1,#inner-2,#inner-3{
+    height: fit-content;
+}
+.inner-div h5{
+    /* background-color: #ff9712; */
+    padding: 10px;
+}
+.inner-div p{
+    margin: 10px;
+}
+#faq-con-btn{
+    margin: 30px auto;
+    background-color: #ff9712;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 12px 18px;
+}
+#faq-con-btn:hover{
+    background-color: #7072a8bb;
+}
+
+
+/* media css start */
+
+@media (max-width:1024px){
+    #faq-sec{
+        padding: 30px;
+        flex-direction:column;
+    }
+}
+@media (max-width:768px){
+    .inner-div {
+        height: fit-content;
+    }
+    .q{
+        /* padding: 10px; */
+        height: fit-content;
+    }
+}
+@media (max-width:660px){
+    #faq-del p {
+        width: 100%;
+    }
+   
+}
+
+/* services process css */
+#ser-p
+{
+    max-width: 1140px;
+    padding: 20px;
+    margin: 40px auto;
+}
+#ser-p-inner
+{
+    display: flex;
+    justify-content: start;
+    align-items: stretch;
+    margin: 20px auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.ser-p-list
+{
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+    flex:  0 0 350px;
+}
+#ser-p-h4
+{
+    color: white;
+    margin: 40px auto;
+    font-size: 40px;
+    font-weight:500;
+}
+/* services process end*/
+

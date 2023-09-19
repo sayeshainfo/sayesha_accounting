@@ -1,0 +1,23 @@
+#photo{
+    height: 400px;
+    background: url('img/per-1.jpg');
+    width: 400px;
+    background-size: 100% 100%;
+    animation: aniphoto 15s 1s infinite ease-in;
+}
+
+@keyframes aniphoto {
+    0%{
+        background: url('img/per-1.jpg');
+    background-size: 100% 100%;
+
+        transform: rotatey(0deg);
+    }
+    50%{
+        background: url('homeper-1.png');
+    background-size: 100% 100%;
+
+        transform: rotatey(180deg);
+    }
+}
+

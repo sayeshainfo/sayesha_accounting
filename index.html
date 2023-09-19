@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link bootstrap , font awesome  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- link css -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <title>home</title>
+
+    <!-- style for chat box start -->
+<style>
+    #en-main
+    {
+        background-color: white;
+        width: 300px;
+        border-radius: 30px;
+        box-shadow: .2px .5px 2px 3px rgb(55, 49, 49);
+        position: fixed;
+        bottom: 40px;
+        right: 20px;
+        z-index: 3;
+        margin: 0px 30px;
+        display: none;
+    }
+    #en-head
+    {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        display: inline-block;
+        width: 100%;
+        padding: 30px 20px;
+        border-radius: 20px 20px 0 0;
+    }
+    #en-head img{
+        display: inline-block;
+    }
+    #en-head  h5
+    {
+        display: inline-block;
+    }
+    #chat-space
+    {
+        height: 300px;
+        overflow: scroll;
+        scroll-behavior: smooth;
+        padding: 20px;
+        background-color: #bcbce7;
+
+    }
+    #chat-space::-webkit-scrollbar
+    {
+        display: none;
+    }
+    #chat-input
+    {
+        background-color:rgb(255, 255, 255) ;
+        padding: 20px;
+        width: 100%;
+        border-radius:  0 0 20px 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+    }
+     #chat-inp
+    {
+        width: 70%;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        background-color: #bcbce7;
+        /* display: inline-block; */
+    }
+
+    #send-btn
+    {
+        color: rgb(0, 0, 0);
+        margin: 2px 0px 2px 20px;
+        font-size: 16px;
+        border: none;
+        /* display: inline-block; */
+    }
+    .chat-cs
+    {
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        display: flex;
+    }
+    #chat-cust
+    {
+       width: 100%;
+       display: flex;
+       flex-wrap: wrap;
+       flex-direction: column;
+       float: right;
+    }
+    #default-chat
+    {
+       width: 100%;
+       display: flex;
+       flex-wrap: wrap;
+       flex-direction: column;
+       float: right;
+    }
+    #chat-come
+    {
+        color: white;
+        font-size: 17px;
+        background-color: rgb(152, 128, 128);
+        border-radius: 20px;
+        /* margin: 10px; */
+        width: fit-content;
+        height: fit-content;
+        padding: 5px 30px;
+        float: right;
+        margin: 2px;
+        display: flex;
+        justify-content: right;
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+        /* margin: 10px; */
+    }
+    #default-chat p
+    { 
+      background-color: rgb(209, 209, 128);
+      margin:2px 10px;
+      border-radius: 20px;
+      padding: 4px 20px;
+      animation: anichat 2s linear forwards;
+
+      font-size: 20px;
+  
+    }
+
+    #chat-box
+    {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+    }
+    #chat-box
+    {
+      color: white;
+      font-size: 40px;
+      z-index: 1;
+    }
+    @keyframes anichat
+    {
+        0%
+        {
+            opacity: 0;
+        }
+        100%
+        {
+            opacity: 1;
+        }
+    }
+   </style>
+    <!-- style for chat box end -->
+</head>
+
+<body>
+    <!-- header section -->
+    <div id="head">
+        <!-- logo and slogon -->
+        <div id="logo">
+            <img src="img/logoimg.png" alt="" class="logo-img">
+         
+        </div>
+        <div id="list">
+            <!-- menu list section -->
+            <ul>
+                <li><a href="index.html" style="color: #ff9712;">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="account.html">ACCOUNTING & TAX
+                </a></li>
+                <li><a href="taxandc.html">TAX & COMPLIANCE</a></li>
+                <li><a href="liecenseandr.html">LICENSES & REGITRATION</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div id="chat-box">
+            
+            <a href="https://wa.link/r2w2g8"  style="color:white"><i class="fa fa-whatsapp"></i></a>
+            
+        </div>
+        <!-- social link menu list -->
+        <div id="social-link">
+            <a href="https://wa.link/r2w2g8"><i class="fa fa-whatsapp"></i></a>
+            <a href="https://instagram.com/sayeshaaccounting?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="><i class="fa fa-instagram"></i></a>
+            
+                <a href="tel:+918696196468"><i class="fa fa-phone"></i></a>
+         
+        </div>
+        <div id="menu-btn">
+            <i class="fa fa-bars" id="menu"></i>
+        </div>
+    </div>
+
+    <!-- mob div header start -->
+        <!-- <script src="script."></script> -->
+         <div id="mob-div">
+            <div id="mob-logo">
+                <div>
+                <img src="img/logoimg.png" alt="logo" class="mob-logo">
+                <!-- <p>logo</p> -->
+            </div>
+            <div>
+                <i class="fa fa-close" id="close-btn"></i>
+            </div>
+            </div>
+            <div id="mob-social-link">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="account.html">ACCOUNTING & TAX
+                </a></li>
+                <li><a href="taxandc.html">TAX & COMPLIANCE</a></li>
+                <li><a href="liecenseandr.html">LICENSES & REGITRATION</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                    <a href="https://wa.link/r2w2g8"><i class="fa fa-whatsapp"></i></a>
+                    <a href="https://instagram.com/sayeshaaccounting?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="><i class="fa fa-instagram"></i></a>
+                    
+                        <a href="tel:+918696196468"><i class="fa fa-phone"></i></a>
+                </ul>
+            </div>
+         </div>
+    <!-- mob div header end -->
+
+    <!-- header section end -->
+
+    <!-- hero section start -->
+    <div id="hero">
+        <div id="hero-con">
+            <h3>WELCOME TO Sayesha accounting</h3>
+            <h2>Streamline Your Financial Path with Expert </h2>
+            <p>Accounting services include tax preparation and counseling, as well as tracking spending and earnings. Accounting is concerned with preserving accurate financial records and implementing effective recordkeeping systems.</p>
+
+            <button id="btn1"><a href="contact.html" style="text-decoration: none;color: white;">contact us</a></button>
+            <button id="btn2"><a href="about.html" style="text-decoration: none;color: white;">About Us</a></button>
+        </div>
+        <div id="hero-img">
+            <img src="herosecimg.png" alt="person-img" id="img-1">
+            <!-- <div id="circle">
+
+            </div> -->
+        </div>
+
+    </div>
+    <!-- hero end -->
+
+    <!-- about section with img -->
+    <div id="ab">
+        <div id="ab-con">
+            <div id="ab-con-main">
+                <h4>WELCOME TO Sayesha accounting</h4>
+                <h1>Sayesha accounting- We're Here To Help You Grow Your Business</h1>
+                <div class="bor">
+
+                </div>
+            </div>
+            <div class="row m-0 d-flex justify-content-center">
+                <div id="ab-con-mis" class="col-lg-5 col-12">
+                    <i></i>
+                    <h4>Client-Centric Approach:</h4>
+                    <p>
+                        Our mission revolves around you, our valued client. We are dedicated to understanding your unique goals, challenges, and preferences.</p>
+                </div>
+                <div id="ab-con-team" class="col-lg-5 col-12">
+                    <i></i>
+                    <h4>
+                        Client Success and Satisfaction:</h4>
+                    <p>Ultimately, our mission is centered on your success and satisfaction. We measure our achievements by the positive impact we have on your business or personal endeavors. </p>
+                </div>
+
+                <div id="ab-con-team" class="col-lg-5 col-12">
+                    <i></i>
+                    <h4>
+                        Innovative Solutions:</h4>
+                    <p>We are passionate about staying at the forefront of technology and design trends. Our mission is to provide you with cutting-edge solutions that leverage the latest tools, techniques, and best practices.</p>
+                </div>
+
+                <div id="ab-con-team" class="col-lg-5 col-12">
+                    <i></i>
+                    <h4>
+                        Quality and Attention to Detail:</h4>
+                    <p>Excellence is the cornerstone of our mission. We are committed to delivering solutions of the highest quality, paying meticulous attention to every detail</p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- about end -->
+
+    <!-- services section -->
+    <div id="ser">
+        <div id="ser-con">
+            <h3>Service We Offers</h3>
+            <div class="bor-2"></div>
+            <p>Service features tended no do thoughts me on dissuade scarcely own are pretty spring suffer old denote
+                his proposal speedily amr striking am now.</p>
+        </div>
+        <div id="ser-list">
+            <div class="list-1 list">
+                <i class="fa fa-whatsapp"></i>
+                <h4>Accounting</h4>
+                <!-- <p>Professional Logo Design Services to Boost Your Brand</p> -->
+                <!-- <p>Logo design services are available to help businesses create and refine their logos. These services can range from freelance graphic designers to full-service branding agencies.</p> -->
+                <p>Accounting is a systematic process of recording, summarizing, analyzing, and interpreting financial transactions and information of an organization or individual</p>
+                <button><a href="account.html">Read More</a>
+                </button>
+            </div>
+            <div class="list-2 list">
+                <i class="fa fa-whatsapp"></i>
+                <h4>BOOK-KEEPING</h4>
+                <!-- <p>Professional Video Editing Tools for Your Creative Projects</p>/ -->
+                    <!-- <p>Another crucial factor is the editor's portfolio. A strong portfolio should showcase a variety of styles and demonstrate the editor's ability to tell a compelling story through video.</p> -->
+                    <p>
+                        Bookkeeping is a fundamental subset of accounting that involves the systematic recording, organizing, and tracking of an organization's financial transactions.</p>
+                <button><a href="account.html">Read More</a></button>
+            </div>
+            <div class="list-3 list">
+                <i class="fa fa-whatsapp"></i>
+                <h4>GST FILING
+                </h4>
+                <!-- <p>Create Professional Banners with Our Experience</p> -->
+                <!-- <p>Banner making services are a valuable resource for businesses, organizations, and individuals who need high-quality banners for events, promotions, and advertising purposes.</p> -->
+                <p>GST Filing, also known as Goods and Services Tax filing, is a legal requirement in many countries that have implemented the Goods and Services Tax (GST)</p>
+                <button><a href="taxandc.html">Read More</a></button>
+            </div>
+            <div class="list-4 list">
+                <i class="fa fa-whatsapp"></i>
+                <h4>GST RECONCILATION
+                </h4>
+                <!-- <p>Create Professional Quality Posters Easily with us</p> -->
+                <!-- <p>Finally, poster making services use various printing techniques to produce high-quality posters. These techniques include digital printing, screen printing, and offset printing.</p> -->
+                <p>It involves comparing the tax data reported by the taxpayer with the data recorded by the tax authorities to ensure accuracy and compliance</p>
+                <button><a href="taxandc.html">Read More</a></button>
+            </div>
+            <div class="list-5 list">
+                <i class="fa fa-whatsapp"></i>
+                <h4>GST CANCELLATION & REVOATIOM</h4>
+                <!-- <p>Web development services refer to the process of creating,maintaining websites for businesses and individuals. </p> -->
+                <p>GST Cancellation and GST Revocation are two distinct processes related to the Goods and Services Tax (GST) system, primarily used by countries to regulate taxation on the supply of goods and services</p>
+                <button><a href="taxandc.html">Read More</a></button>
+            </div>
+            <div class="list-6 list">
+                <i class="fa fa-whatsapp"></i>
+                <h4>GST <br> REGISTRATION
+                </h4>
+                <!-- <p>Creative Ideas for Captivating Instagram Posts</p> -->
+                <!-- <p>Instagram is a popular social media platform that allows users to share photos and videos with their followers.it's boots your dream business</p> -->
+                <p>GST Registration, also known as Goods and Services Tax Registration, is a crucial process for businesses and individuals in countries that implement the Goods and Services Tax (GST) system</p>
+                <button><a href="liecenseandr.html">Read More</a></button>
+            </div>
+            <div class="list-7 list">
+                <i class="fa fa-whatsapp"></i>
+                <h4>MSME <br> REGISTRATION
+
+                </h4>
+                <!-- <p>Search engine optimization (SEO) plays a vital role in improving your website's visibility, attracting organic traffic, and driving conversions.</p> -->
+                <p>MSME Registration, which stands for Micro, Small, and Medium Enterprises Registration, is a government-initiated scheme designed to promote and support small and medium-sized enterprises (SMEs) in various countries</p>
+                <button><a href="liecenseandr.html">Read More</a></button>
+            </div>
+            <div class="list-8 list">
+                <i class="fa fa-whatsapp"></i>
+                <h4>PF <br> REGISTRATION
+                </h4>
+                <!-- <p>Whether you run a business website, manage a blog, or maintain a strong social media presence, compelling and retaining your target audience. </p> -->
+                <p>PF Registration, also known as Provident Fund Registration, is a mandatory registration process in many countries, including India. It is aimed at providing retirement benefits and savings for employee</p>
+                <button><a href="liecenseandr.html">Read More</a></button>
+            </div>
+            <!-- <div class="list-9 list">
+                <i class="fa fa-whatsapp"></i>
+                <h4>PT <br> REGISTRATION
+                </h4>
+                <p>Whether you run a business website, manage a blog, or maintain a strong social media presence, compelling and retaining your target audience. </p> -->
+                <!-- <button>Read More</button>
+            </div> --> 
+        </div>
+    </div>
+    <!-- services section end
+     -->
+
+    <!-- team section start -->
+    <div id="team-sec">
+        <h2>Meet Our Team</h2>
+        <div class="bor-2"></div>
+        <p id="min-p" style="text-align: center;">Our team comprises skilled professionals who are passionate about their craft and stay up-to-date with the latest industry trends and technologies.</p>
+        <div id="team">
+            <div class="team-list">
+                <img src="img/per-1.jpg" alt="person-img-1" class="team-img-list">
+                <h3>sharwan Suthar</h3>
+                <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque vitae eaque ducimus aperiam omnis
+                    necessitatibus.</p> -->
+                <h5>Founder</h5>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-whatsapp"></i>
+                <i class="fa fa-phone"></i>
+            </div>
+            <div class="team-list">
+                <img src="img/per-1.jpg" alt="person-img-2" class="team-img-list">
+                <h3>Name 2</h3>
+                <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque vitae eaque ducimus aperiam omnis
+                    necessitatibus.</p> -->
+                <h5>CEO</h5>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-whatsapp"></i>
+                <i class="fa fa-phone"></i>
+            </div>
+            <!-- <div class="team-list">
+                <img src="img/per-1.jpg" alt="person-img-3" class="team-img-list">
+                <h3>name-3</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque vitae eaque ducimus aperiam omnis
+                    necessitatibus.</p>
+                <h5>Mannager</h5>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-whatsapp"></i>
+                <i class="fa fa-phone"></i>
+            </div> -->
+            <!-- <div class="team-list">
+                <img src="img/per-1.jpg" alt="person-img-4" class="team-img-list">
+                <h3>Name</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque vitae eaque ducimus aperiam omnis
+                    necessitatibus.</p>
+                <h5>Post (work)</h5>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-whatsapp"></i>
+                <i class="fa fa-phone"></i>
+            </div> -->
+            <!-- <div class="team-list">
+                <img src="img/per-1.jpg" alt="person-img-4" class="team-img-list">
+                <h3>Gokul</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque vitae eaque ducimus aperiam omnis
+                    necessitatibus.</p>
+                <h5>Post (work)</h5>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-whatsapp"></i>
+                <i class="fa fa-phone"></i>
+            </div> -->
+        </div>
+    </div>
+    <!-- team section end
+     -->
+
+    <!-- work process -->
+    <div id="work-sec">
+        <h2>How Does We Work</h2>
+        <div class="bor-2"></div>
+        <p id="min-p-s" style="text-align: center;">
+            At our company, we are dedicated to providing a seamless and hassle-free experience to our valued clients. We understand that effective communication, efficient processes, and round-the-clock support are essential for your satisfaction.</p>
+        <div id="work">
+            <div class="work-list">
+                <img src="img/per-1.jpg" alt="work-img-1" class="work-img">
+                <h4>Call Up</h4>
+                <p style="margin-top: 10px;">We believe in the power of direct communication. Our team is readily available to assist you over the phone, answer your queries, and provide guidance on any aspect of our services. </p>
+            </div>
+            <div class="work-list">
+                <img src="img/per-1.jpg" alt="work-img-2" class="work-img">
+                <h4>Form Fill up</h4>
+                <p style="margin-top: 10px;">By filling out our forms, you can conveniently communicate your requirements and preferences, allowing us to better understand your needs and provide tailored solutions.
+                </p>
+            </div>
+            <div class="work-list">
+                <img src="img/per-1.jpg" alt="work-img-3" class="work-img">
+                <h4>24/7 Support</h4>
+                <p style="margin-top: 10px;">Our dedicated support team is available 24 hours a day, 7 days a week to address your concerns and ensure that your experience with our services remains uninterrupted and smooth.</p>
+            </div>
+        </div>
+    </div>
+    <!-- work process end -->
+
+    <!-- why choose us section start -->
+    <!-- <div id="wcu-sec">
+        <div id="wcu-con">
+            <h5>WHAT WE DO</h5>
+            <h2 id="h2-wcu">WHY CHOOSE US?</h2>
+            <div class="bor"></div>
+            <div class="wcu-inner-con">
+                <h2>Quality:</h2>
+                <p>We are committed to delivering high-quality results that exceed your expectations. Our attention to detail ensures that every aspect of your project is meticulously executed.</p>
+            </div>
+            <div class="wcu-inner-con">
+                <h2>Timely Delivery:</h2>
+                <p>We value your time and strive to deliver projects within the agreed-upon timelines, without compromising on quality.</p>
+            </div>
+
+        </div>
+        <div id="wcu-img">
+
+        </div>
+    </div> -->
+    <!-- why choose us section end -->
+
+    <!-- our special plan start-->
+    <div id="plan-sec">
+        <h2 id="plan-h2">Our Special Plan</h2>
+        <div class="bor-2"></div>
+        <p id="plan-p" style="text-align: center;">This exclusive plan offers a range of premium features and services that will elevate your website to new heights of excellence.</p>
+        <div id="plan">
+            <div class="plan-list">
+                <h2>Basic PLan</h2>
+                <!-- <h4>$20 /month</h4>
+                <p> 3 Bedrooms cleaning </p>
+                <p>Vacuuming </p>
+                <p> 2 Bathroom cleaning </p>
+                <p>Mirror Cleaning </p>
+                <p>1 Livingroom cleaning </p>
+                <p>Window Sills </p> -->
+                <button>Contact Now</button>
+            </div>
+            <div class="plan-list">
+                <h2>Premium Plan</h2>
+                <!-- <h4>$35 /month</h4>
+                <p> 3 Bedrooms cleaning </p>
+                <p>Vacuuming </p>
+                <p> 2 Bathroom cleaning </p>
+                <p>Mirror Cleaning </p>
+                <p>1 Livingroom cleaning </p>
+                <p>Window Sills </p> -->
+                <button>Contact Now</button>
+            </div>
+            <div class="plan-list">
+                <h2>Standard Plan</h2>
+                <!-- <h4>$50 /month</h4>
+                <p> 3 Bedrooms cleaning </p>
+                <p>Vacuuming </p>
+                <p> 2 Bathroom cleaning </p>
+                <p>Mirror Cleaning </p>
+                <p>1 Livingroom cleaning </p>
+                <p>Window Sills </p> -->
+                <button>Contact Now</button>
+            </div>
+        </div>
+    </div>
+    <!-- our special plan end -->
+
+    <!-- our gallery section start-->
+    <!-- <div id="gal-sec">
+        <h5 id="gal-h5">Our Letest Work</h5>
+        <h2>Special Gallery</h2>
+        <div id="scroll-div">
+            <div class="img-list-gallery img-list-gallery-1"></div>
+            <div class="img-list-gallery img-list-gallery-2"></div>
+            <div class="img-list-gallery img-list-gallery-3"></div>
+            <div class="img-list-gallery img-list-gallery-4"></div>
+            <div class="img-list-gallery img-list-gallery-5"></div>
+            <div class="img-list-gallery img-list-gallery-6"></div>
+            <div class="img-list-gallery img-list-gallery-7"></div>
+            <div class="img-list-gallery img-list-gallery-8"></div>
+            <div class="img-list-gallery img-list-gallery-9"></div>
+            <div class="img-list-gallery img-list-gallery-10"></div>
+
+
+        </div>
+    </div> -->
+    <!-- our gallery section end-->
+
+    <!-- custumer reviews section start-->
+    <div id="cus-rev">
+        <h5 id="cus-rev-h5">Testimonial</h5>
+        <h2 id="cus-rev-h2">What Our Custumers Say</h2>
+        <div id="cus-rev-inner">
+            <div class="rev-list">
+                <div class="div-1-rev">
+                    <img src="img/per-1.jpg" alt="person-img" class="rev-img">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+
+                </div>
+                <div class="div-2-rev-con">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit ullam itaque aliquam
+                        suscipit mollitia obcaecati consequuntur id nesciunt sit perferendis incidunt nemo beatae quos
+                        tempora modi a repudiandae, adipisci excepturi!</p>
+                </div>
+                <div class="div-3-rev-mail">
+                    <i class="fa fa-mail"></i>
+                    <h5>exaple@gmail.com</h5>
+                </div>
+            </div>
+
+            <div class="rev-list">
+                <div class="div-1-rev">
+                    <img src="img/per-1.jpg" alt="person-img" class="rev-img">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+
+                </div>
+                <div class="div-2-rev-con">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit ullam itaque aliquam
+                        suscipit mollitia obcaecati consequuntur id nesciunt sit perferendis incidunt nemo beatae quos
+                        tempora modi a repudiandae, adipisci excepturi!</p>
+                </div>
+                <div class="div-3-rev-mail">
+                    <i class="fa fa-mail"></i>
+                    <h5>exaple@gmail.com</h5>
+                </div>
+            </div>
+
+            <div class="rev-list">
+                <div class="div-1-rev">
+                    <img src="img/per-1.jpg" alt="person-img" class="rev-img">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+
+                </div>
+                <div class="div-2-rev-con">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit ullam itaque aliquam
+                        suscipit mollitia obcaecati consequuntur id nesciunt sit perferendis incidunt nemo beatae quos
+                        tempora modi a repudiandae, adipisci excepturi!</p>
+                </div>
+                <div class="div-3-rev-mail">
+                    <i class="fa fa-mail"></i>
+                    <h5>exaple@gmail.com</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- custumer reviews section end-->
+
+    <!-- skills list section start -->
+    <!-- <div id="skills-sec">
+        <h4>Skills bar</h4> -->
+        <!-- <div class="bor-2"></div> -->
+        <!-- <div class="row" id="skills">
+            <div class="col-lg-5 col-12 outer-skills">
+                <div id="inner-skills-1">
+                </div>
+                <div>
+                    <h5>web design</h5>
+                </div>
+            </div>
+            <div class="col-lg-5 col-12  outer-skills">
+                <div id="inner-skills-2"></div>
+                <div>
+                    <h5>web development</h5>
+                </div>
+            </div>
+            <div class="col-lg-5 col-12  outer-skills">
+                <div id="inner-skills-3"></div>
+                <div>
+                    <h5>video editing</h5>
+                </div>
+            </div>
+            <div class="col-lg-5 col-12  outer-skills">
+                <div id="inner-skills-4"></div>
+                <div>
+                    <h5>poster making</h5>
+                </div>
+            </div>
+            <div class="col-lg-5 col-12  outer-skills">
+                <div id="inner-skills-5"></div>
+                <div>
+                    <h5>logo creator</h5>
+                </div>
+            </div>
+            <div class="col-lg-5 col-12  outer-skills">
+                <div id="inner-skills-6"></div>
+                <div>
+                    <h5>insta post</h5>
+                </div>
+            </div>
+
+        </div>
+    </div> -->
+    <!-- skills list section end -->
+
+    <!-- chat box start -->
+    <div id="en-main">
+        <div id="en-head">
+            <!-- <img src="" alt="logo" id="logo"> -->
+            <h5>Enquiry chat</h5>
+            <i class="fa fa-close" style="float: right;color: rgb(0, 0, 0);font-size: 20px;" id="close-btn2"></i>
+        </div>
+        <div id="chat-space">
+          <div id="custom-chat" class="">
+            <div id="chat-cust">
+
+            </div>
+             <div id="default-chat">
+
+             </div>
+          </div>
+        </div>
+        <div id="chat-input">
+<form action="" method="post" name="contacthf2" id="contacthfd">
+
+            <input type="text" name="msg" id="chat-inp" value="">
+           <button type="submit" value="submit" style="background-color: transparent;border: none; width: fit-content;"> <i class="fa fa-paper-plane" id="send-btn" ></i></button>
+            <!-- <input type="submit" value="submit" id="send-btn"> -->
+            </form>
+        </div>
+    </div>
+    <!-- chat box end -->
+
+    <!-- footer -->
+       <div id="footer-sec">
+        <div id="footer-img">
+            <img src="img/logoimg.png" alt="" id="footer-img">
+            <p>Join us on this exciting journey and let us empower your vision through our expertise and dedication.</p>
+        </div>
+        <div class="footer-link" id="footer-1">
+            
+            <ul>
+                <p>Links</p>
+                <li><a href="about.html">About</a></li>
+                <li><a href="account.html">Accounting</a></li>
+                <li><a href="liecenseandr.html">LICENSES & REGISTRATION</a></li>
+                <li><a href="taxandc.html">Tax & Compliance</a></li>
+                <li><a href="contact.html">contact us</a></li>
+            </ul>
+        </div>
+        <div class="footer-link" id="footer-2">
+           
+            <ul>
+                <p>services</p>
+                <li><a href="">GST REGISTRATION</a></li>
+                <li><a href="account.html">Accounting</a></li>
+                <li><a href="account.html">BOOK-KEEPING</a></li>
+                <li><a href="taxandc.html">PF REGISTRATION</a></li>
+                <li><a href="taxandc.html">MSME REGISTRATION</a></li>
+            </ul>
+        </div>
+        <div class="footer-link" id="footer-3">
+           
+            <ul>
+                <p>contact</p>
+                <li>Phone:</li>
+                <li><a href="tel:+918696196468">+91 8696196468</a></li>
+                <li>Email:</li>
+                <li><a href="mailto:sayeshainfo@gmail.com">sayeshainfo@gmail.com</a></li>
+                <a href="https://wa.link/r2w2g8"><i class="fa fa-whatsapp"></i></a>
+                <a href="https://instagram.com/sayeshaaccounting?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="><i class="fa fa-instagram"></i></a>
+                
+                    <a href="tel:+918696196468"><i class="fa fa-phone"></i></a>
+             
+            </ul>
+         
+
+        </div>
+
+       </div>
+    <!-- fopter end -->
+
+     <script src="script.js"></script>
+     <script src="chat.js"></script>
+     <script>
+        ScrollReveal({ reset: false,
+                      distance: '10px',
+                      duration: 1000,
+                      delay :100,
+        });
+        ScrollReveal().reveal('#hero-con h3 ,#btn1, #btn2 ,#ab-con-main,.list-1,.list-5,#team-sec h2,.work-inner-con,#plan-h2,.img-list-gallery-1,.img-list-gallery-5,.img-list-gallery-9,#cus-rev-h2,#footer-img',{ delay: 100 , origin: 'left'});
+       
+        ScrollReveal().reveal('#hero-img,#ab-con-team,.list-2,.list-6,.bor-2,#work-sec h2,#min-p-s,#wcu-con h5,#plan-p,#gal-h5,.img-list-gallery-2,.img-list-gallery-6,.img-list-gallery-10,.rev-list,#skills-sec h4,#footer-1', { delay: 100 ,origin: 'top'});
+       
+        ScrollReveal().reveal('#hero-con h2, #hero-con p,#ab-con-mis,.list-3,.list-7,#min-p,#h2-wcu,.img-list-gallery-3,.img-list-gallery-7,#cus-rev-h5,#footer-2', { delay: 50 ,origin: 'right'});
+       
+        ScrollReveal().reveal('#ser-con,.list-4,.list-8,.team-list,.work-list,#wcu-img,.plan-list,.img-list-gallery-4,.img-list-gallery-8,.outer-skills,#footer-3', { delay: 100 ,origin: 'bottom'});
+       </script>
+</body>
+
+</html>

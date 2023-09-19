@@ -1,0 +1,42 @@
+#tm-1{
+    display: grid;
+    place-items: center;
+    height: 300px;
+    background: url('img/main-bg-5.jpg');
+    background-blend-mode: hard-light;
+}
+#tm-1 h2{
+    color:white;
+    font-size: 24px;
+    font-weight: 700;
+}
+#skills-sec{
+    text-align: center;
+    display: block;
+    margin: 50px auto 10px auto;
+
+}
+#skills-sec h2{
+    font-size: 40px;
+    width: 400px;
+     color:white;
+     margin: 10px auto;
+     text-align: center;
+}
+#skills-sec p{
+    width: 600px;
+    margin: 10px auto;
+    text-align: center;
+   color: white;
+}
+
+@media (max-width:660px)
+{
+    #skills-sec p{
+        width: 100%;
+    }
+    #skills-sec h2{
+        width: 100%;
+        padding: 5px 20px;
+    }
+}

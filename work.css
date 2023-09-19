@@ -1,0 +1,274 @@
+#w-1{
+    display: grid;
+    place-items: center;
+    height: 300px;
+    background: url('img/main-bg-3.png');
+    background-blend-mode: hard-light;
+}
+#w-1 h2{
+    color: white;
+    font-weight: 700;
+    font-size: 24px;
+}
+.work-sec{
+    margin: 40px auto 20pz auto;
+    padding: 30px;
+    text-align: center;
+}
+/* #work{
+    margin: 20px auto;
+    text-align: center;
+} */
+.work-sec h2{
+    color: #5F65F4;
+    margin: 40px auto 10px auto;
+}
+.work-sec h4{
+    color: white;
+    font-size: 30px;
+    width: 600px;
+    margin: 20px auto;
+}
+.work-sec p{
+    color: white;
+    margin: 10px auto;
+    width: 600px;
+}
+.work{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 50px;
+}
+.work-list-sm{
+    height: 200px;
+    padding: 10px;
+    color:black;
+    flex: 1 0 300px;
+    /* background-color: black; */
+    display: grid;
+    place-items: center;
+}
+.list-con{
+    display: none;
+}
+.work-list-sm:hover{
+    cursor: pointer;
+    /* background-blend-mode: screen; */
+    /* background-color: rgba(0, 0, 0, 0.411); */
+    transform: scale(.95,.95);
+    box-shadow: .5px .5px 3px .2px rgba(255, 255, 255, 0.719);
+    transition: all 100ms;
+    border-radius: 10px;
+    z-index: 1;
+}
+.work-list-sm:hover .list-con{
+    display: block;
+}
+
+/* .work-list-big{
+    height: 400px;
+    flex:1 0 300px;
+    background-color: red;
+} */
+.work-list-1{
+    background: url('img/work1.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.work-list-2{
+    background: url('img/work2.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-3{
+    background: url('img/work3.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-4{
+    background: url('img/work4.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-5{
+    background: url('img/work5.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-6{
+    background: url('img/work6.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-7{
+    background: url('img/work7.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-8{
+    background: url('img/work8.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-9{
+    background: url('img/work9.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-10{
+    background: url('img/work10.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-11{
+    background: url('img/work11.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-12{
+    background: url('img/work13.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-13{
+    background: url('img/work11.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-14{
+    background: url('img/work15.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-15{
+    background: url('img/work16.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-16{
+    background: url('img/work17.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-17{
+    background: url('img/work18.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-18{
+    background: url('img/work19.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.work-list-19{
+    background: url('img/work20.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-20{
+    background: url('img/work21.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-21{
+    background: url('img/work22.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-22{
+    background: url('img/work23.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-23{
+    background: url('img/work24.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-24{
+    background: url('img/work2.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-25{
+    background: url('img/work5.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-26{
+    background: url('img/work6.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-27{
+    background: url('img/work11.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-28{
+    background: url('img/work1.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-29{
+    background: url('img/work10.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-30{
+    background: url('img/work16.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-31{
+    background: url('img/work6.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.work-list-32{
+    background: url('img/work3.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media (max-width:660px){
+    .work-sec h4 , .work-sec p{
+        width: 100%;
+        padding: 20px;
+    }
+}
