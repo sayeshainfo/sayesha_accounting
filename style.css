@@ -552,7 +552,40 @@ body{
     color: white;
 }
 /* our plan secrion css end */
+/* software we use */
+#Soft-use
+{
+    display: block;
+    margin: 100px auto 150px auto;
+    
+    text-align: center;
+}
 
+.soft-inner
+{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin: 70px auto;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    color: white !important;
+
+}
+.soft-inner-list
+{
+    flex: 0 0 200px;
+    text-align: center;
+}
+.soft-img
+{
+    height: 100%;
+    width: 100px;
+    object-fit: contain;
+    
+}
+/* software we use end */
 
 /* gallery css start */
 #gal-sec{
@@ -928,6 +961,21 @@ body{
     }
 
 }
+@media (max-width:670px)
+{
+    #Soft-use
+    {
+        margin: 40px auto 40px auto;
+    }
+    .soft-inner-list
+    {
+        margin: 30px 10px;
+    }
+    .soft-inner{
+        margin: 30px auto;
+    }
+}
+
 
 @media (max-width:600px){
     #ab-con-main h1,  #ser-con p, #team-sec #min-p,#work-sec #min-p-s,#plan-p{
