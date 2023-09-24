@@ -987,7 +987,7 @@ body{
 @media (max-width:540px){
     #img-1{
         height: 250px;
-        margin: 0px;
+        margin: 20px 0px;
     }
     #circle{
         width: 240px;
