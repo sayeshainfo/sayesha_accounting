@@ -368,7 +368,7 @@ body{
 }
 .team-list
 {
-    flex: 0 0 350px;
+    flex: 0 0 320px;
     background-color: white;
     padding: 50px 30px;
     border-radius: 10px;
